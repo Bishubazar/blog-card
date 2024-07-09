@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+        <title>Frontend Mentor | Blog preview card</title>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+            body {
+                font-family: "Figtree", sans-serif;
+            }
+
+            .card-shadow {
+                box-shadow: 8px 8px black;
+            }
+
+            .text-r-regular {
+                font-weight: 300;
+            }
+        </style>
+        <style type="text/tailwindcss">
+            @layer utilities {
+                .heading {
+                    @apply font-extrabold  text-[24px];
+                }
+
+                .m-base {
+                    @apply font-medium text-[16px];
+                }
+
+                .s-extrabold {
+                    @apply font-extrabold text-base;
+                }
+                .s-medium {
+                    @apply font-medium text-base;
+                }
+            }
+        </style>
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            black: "#111111",
+                            yellow: "#F4D04E",
+                            grey: "#7F7F7F",
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body
+        class="bg-yellow px-6 flex h-screen items-center justify-center gap-8"
+    >
+        <div
+            class="card card-shadow border border-black shadow-dark max-w-[384px] bg-white inline-flex flex-col p-6 gap-6 rounded-[20px]"
+        >
+            <div class="blog-image">
+                <img
+                    src="./assets/images/illustration-article.svg"
+                    alt="card image"
+                    class="h-[200px] rounded-[10px]"
+                />
+            </div>
+            <div class="content flex flex-col gap-3">
+                <div class="inline-flex">
+                    <h3
+                        class="text-xs rounded-[4px] font-extrabold bg-yellow px-4 py-1"
+                    >
+                        Learning
+                    </h3>
+                </div>
+                <p class="date text-xs font-medium text-dark">
+                    Published 21 Dec 2023
+                </p>
+                <a
+                    href=""
+                    target="_blank"
+                    class="heading text-xl text-dark duration-150 hover:text-yellow"
+                >
+                    HTML & CSS foundations
+                </a>
+                <p class="s-medium text-grey">
+                    These languages are the backbone of every website, defining
+                    structure, content, and presentation.
+                </p>
+                <div class="inline-flex items-center gap-4">
+                    <img
+                        src="./assets/images/image-avatar.webp"
+                        alt="user"
+                        class="user h-8 rounded-full aspect-square"
+                    />
+                    <h1 class="s-extrabold text-dark">Greg Hooper</h1>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
